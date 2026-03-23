@@ -1,0 +1,21 @@
+{
+  "name": "backend-widget",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^8.18.1",
+	"express": "^5.1.0",
+	"morgan": "^1.10.1",
+	"dotenv": "^17.2.3",
+	"body-parser": "^2.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "KumaCode",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+  }
+}

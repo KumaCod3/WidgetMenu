@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+.git
+.env
+package-lock.json
+docker-compose.yml
+Dockerfile
