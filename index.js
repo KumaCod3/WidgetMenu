@@ -22,8 +22,8 @@ app.get('/activeConfig', async (req, res) => {
             db.getMemoGiorno()
         ]);
         		
-		const pranzo = menuOggi.Pranzo.Name ? menuOggi.Pranzo.Name : "Niente in programma";
-		const cena = menuOggi.Cena.Name ? menuOggi.Cena.Name : "Niente in programma";
+		const pranzo = menuOggi.Pranzo.Name || "Niente in programma";
+		const cena = menuOggi.Cena.Name || "Niente in programma";
 		const spazzatura = (spazzaturaOggi?.elementi?.length > 0)
 			? spazzaturaOggi.elementi.map(e => `${e.icona} ${e.name}`).join(", ")
 			: "Niente in programma";
