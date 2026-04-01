@@ -26,7 +26,7 @@ app.get('/activeConfig', async (req, res) => {
 		const cena ="Niente in programma";
 		
 		if (menuOggi != null){
-			console.log(JSON.stringify(menuOggi);
+			console.log(JSON.stringify(menuOggi));
 			const pranzo = menuOggi.Pranzo ? menuOggi.Pranzo.Name : "Niente in programma";
 			const cena = menuOggi.Cena ? menuOggi.Cena.Name : "Niente in programma";
 		}
