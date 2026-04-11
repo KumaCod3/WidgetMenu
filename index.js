@@ -27,8 +27,8 @@ app.get('/activeConfig', async (req, res) => {
 		
 		if (menuOggi != null){
 			console.log(JSON.stringify(menuOggi));
-			const pranzo = menuOggi.Pranzo ? menuOggi.Pranzo.Name : "Niente pranzo";
-			const cena = menuOggi.Cena ? menuOggi.Cena.Name : "Niente cena";
+			pranzo = menuOggi.Pranzo ? menuOggi.Pranzo.Name : "Niente pranzo";
+			cena = menuOggi.Cena ? menuOggi.Cena.Name : "Niente cena";
 		}
 		
 		const spazzatura = (spazzaturaOggi?.elementi?.length > 0)
