@@ -119,7 +119,7 @@ class DBandroidMenu {
     }
 
     // --- METODI DB MENU ---
-    async getActiveConfig() {
+/*    async getActiveConfig() {
 		var oggi = new Date();
 		var inizioGiorno = new Date(oggi);
 		inizioGiorno.setDate(oggi.getDate() );
@@ -136,6 +136,21 @@ class DBandroidMenu {
 		})
 			.populate('Pranzo')
 			.populate('Cena');
+	}*/
+	async getActiveConfig() {
+		const inizioGiorno = new Date();
+		inizioGiorno.setHours(0, 0, 0, 0);
+		const fineGiorno = new Date();
+		fineGiorno.setHours(23, 59, 59, 999);
+
+		return await this.models.Programma.findOne({
+			Data: {
+				$gte: inizioGiorno,
+				$lte: fineGiorno
+			}
+		})
+			.populate('Pranzo')
+			.populate('Cena')
 	}
     // --- METODI DB SPAZZATURA ---
     async getGiorno() {
