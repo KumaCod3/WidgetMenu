@@ -22,8 +22,8 @@ app.get('/activeConfig', async (req, res) => {
             db.getMemoGiorno()
         ]);
         
-		const pranzo ="Niente in programma";
-		const cena ="Niente in programma";
+		let pranzo ="Niente in programma";
+		let cena ="Niente in programma";
 		
 		if (menuOggi != null){
 			console.log(JSON.stringify(menuOggi));
